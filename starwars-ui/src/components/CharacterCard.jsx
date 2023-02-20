@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { Card, CardHeader, CardContent, Link as MUILink } from '@mui/material';
 import { Box } from '@mui/material';
+import { PropTypes } from 'prop-types';
 
 const CharacterCard = ({
   character: { name, homeworld, url } }) => {
@@ -23,5 +24,13 @@ const CharacterCard = ({
     </Box>
   )
 }
+
+CharacterCard.propTypes = {
+  character: PropTypes.shape({
+    name: PropTypes.string.isRequired,
+    homeworld: PropTypes.string,
+  })
+}
+
 
 export default CharacterCard

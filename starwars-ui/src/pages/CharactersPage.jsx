@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { Grid } from '@mui/material';
 import { useLoaderData } from 'react-router-dom';
-import PropTypes from 'prop-types';
 import CharacterCard from '../components/CharacterCard';
 
 export async function loader() {
@@ -59,7 +58,3 @@ export default function CharactersPage() {
         </Grid>
     )
 }
-
-// CharactersPage.propTypes = {
-//     username: PropTypes.string.isRequired
-// }
